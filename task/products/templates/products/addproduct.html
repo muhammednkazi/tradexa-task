@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+{%block productsactive%}active{%endblock%}
+{%block body%}
+<div class="container mt-2">
+  <h2 class="text-center">Add Product</h2>
+<form method="post" action="/products/addproduct">{% csrf_token %}
+  <div class="form-group">
+    <label for="name">Product Name</label>
+    <input type="text" class="form-control" name="name" id="name" placeholder="Enter Product Name">
+  </div>
+  <div class="form-group">
+    <label for="weight">Enter Weight</label>
+    <input type="text" class="form-control" name="weight" id="weight" placeholder="Enter Weight">
+  </div>
+  <div class="form-group">
+    <label for="price">Price</label>
+    <input type="text" class="form-control" id="price" name="price" placeholder="$">
+  </div>
+  <button type="submit" class="btn btn-success">Submit</button>
+  <a href="/" ><button type="button" class="btn btn-danger">Cancel</button></a>
+</form>
+</div>
+{%endblock%}

@@ -1,0 +1,25 @@
+{% extends 'base.html'%}
+{%block usersactive%}active{%endblock%}
+{%block body%}
+<div class="container">
+<div class="col-md-8 blog-main">
+      <h3 class="pb-4 mb-4 font-italic border-bottom">
+      </h3>
+
+      <div class="blog-post">
+        <h2 class="blog-post-title">{{posts_data.title}}</h2>
+        <p class="blog-post-meta">{{posts_data.created_at}}</p>
+        <hr>
+        <p>{{posts_data.text}}</p>
+
+
+      <nav class="blog-pagination">
+        <a class="btn btn-outline-primary" href="/users/blogs">Back</a>
+        <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1" aria-disabled="true">Newer</a>
+      </nav>
+
+    </div>
+    </div>
+
+</div>
+{%endblock%}

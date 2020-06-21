@@ -1,0 +1,19 @@
+{% extends 'base.html'%}
+{%block usersactive%}active{%endblock%}
+{%block body%}
+<div class="container mt-2">
+  <h2 class="text-center">Add Post</h2>
+<form method="post" action="/users/addpost">{% csrf_token %}
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" class="form-control" name="title" id="title" placeholder="Enter Title">
+  </div>
+  <div class="form-group">
+    <label for="text">Enter Text</label>
+    <input type="text" class="form-control" name="text" id="text" placeholder="Enter Text">
+  </div>
+  <button type="submit" class="btn btn-success">Submit</button>
+  <a href="/" ><button type="button" class="btn btn-danger">Cancel</button></a>
+</form>
+</div>
+{%endblock%}
